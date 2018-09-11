@@ -18,7 +18,7 @@ public class AlunosRepository {
 	}
 	
 	
-	public Aluno buscarPorCpf(String cpf) {		
+	public static Aluno buscarPorCpf(String cpf) {		
 		Aluno resultado = null;
 		
 		for(Aluno aluno : AlunosRepository.alunos) {
