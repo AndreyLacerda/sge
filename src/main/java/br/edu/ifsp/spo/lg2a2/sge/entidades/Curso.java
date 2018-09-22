@@ -7,13 +7,14 @@ public class Curso {
 	
 	private String nome;
 	private String codigo;
+	private static Collection<Turma> turmas;
 	
-	public Curso(String nome, String codigo) {
+	public Curso(String nome, String codigo, Turma turma) {
 		this.nome = nome;
 		this.codigo = codigo;
+		Curso.turmas.add(turma);
 	}
 	
-	private Collection<Turma> turmas;
 	public Collection<Turma> getTurmas() {
 		return this.turmas;
 	}

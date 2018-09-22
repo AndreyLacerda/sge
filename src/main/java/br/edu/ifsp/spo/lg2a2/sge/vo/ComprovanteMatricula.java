@@ -14,7 +14,8 @@ public class ComprovanteMatricula {
 	public Turma getTurma() {
 		return turma;
 	}
-	public ComprovanteMatricula(Aluno aluno, Turma turma) {
+	
+	public ComprovanteMatricula(Aluno aluno, Turma turma, String prontuario) {
 		super();
 		this.aluno = aluno;
 		this.turma = turma;

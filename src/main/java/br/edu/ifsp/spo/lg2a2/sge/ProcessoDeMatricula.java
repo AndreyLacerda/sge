@@ -27,10 +27,11 @@ public class ProcessoDeMatricula {
 	}
 	
 	public static ComprovanteMatricula processarMatricula(DadosAluno dados, int cont) {
-		Turma turma = null;
+		Turma turmaADS = new Turma("Turma ADS 1");
 		String pront = gerarProntuario (cont);
 		Aluno aluno = new Aluno (pront, dados.getCpf(), dados.getNome(), dados.getEmail());
-		ComprovanteMatricula comprovante = new ComprovanteMatricula(aluno, turma);
+		AlunosRepository.adicionar(aluno);
+		ComprovanteMatricula comprovante = new ComprovanteMatricula(aluno, turmaADS, pront);
 		return comprovante;
 	}
 	

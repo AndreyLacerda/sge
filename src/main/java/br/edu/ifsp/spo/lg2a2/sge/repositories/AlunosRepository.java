@@ -31,7 +31,7 @@ public class AlunosRepository {
 		return resultado;
 	}
 	
-	public void adicionar(Aluno aluno) {
+	public static void adicionar(Aluno aluno) {
 		AlunosRepository.alunos.add(aluno);
 	}
 	

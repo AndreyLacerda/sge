@@ -42,17 +42,20 @@ public class App {
 		cpf = scan.next();
 		SituacaoMatricula resultado = ProcessoDeMatricula.verificarExistenciaAluno(cpf);
 		if (resultado == SituacaoMatricula.Cadastrado){
-			System.out.println ("CPF já cadastrado! ");
+			System.out.println ("CPF já cadastrado! \n");
 			
 		}
 		if (resultado == SituacaoMatricula.Novo){
-			System.out.println ("CPF não cadastrado! ");
+			System.out.println ("CPF não cadastrado! \n");
 			System.out.print ("Nome: ");
 			nome = scan.next(); 
 			System.out.print ("E-mail: ");
 			email = scan.next();
 			DadosAluno dados = new DadosAluno(cpf, nome, email);
 			ComprovanteMatricula comprovante = ProcessoDeMatricula.processarMatricula(dados, cont);
+			System.out.println(" -- Comprovante de Matrícula --");
+			System.out.println("Aluno: " + comprovante.getAluno());
+			System.out.println("Turma: " + comprovante.getTurma() + " \n");
 			cont++;
 		}
 		}

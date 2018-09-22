@@ -32,7 +32,8 @@ public class Aluno {
 		return "<prontuario: " 
 				+ this.getProntuario() 
 				+ ", cpf: " + this.getCpf()
-				+ ", nome: " + this.getNome() + ">";
+				+ ", nome: " + this.getNome() 
+				+ ", email: "+ this.getEmail() + ">";
 	}
 	
 	@Override
